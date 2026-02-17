@@ -7,103 +7,106 @@
 </head>
 <body>
 
+<h1 class="titulo">La mochila que sabía esperar</h1>
+
 <div class="book">
 
-  <div class="page active">
-    <h1>La mochila que sabía esperar</h1>
-    <p>La mochila estaba lista desde la noche anterior.<br>
-    No era una mochila cualquiera.<br>
-    Estaba un poco pesada, un poco inflada…<br>
-    y muy, muy llena.</p>
+  <!-- TARJETA 1 -->
+  <div class="card active">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento1.png">
+        <p class="hint">Tocá “Siguiente” para leer ➡</p>
+      </div>
+      <div class="card-back">
+        <h2>La noche anterior</h2>
+        <p>
+          La mochila naranja esperaba en silencio bajo la luz de la lámpara.  
+          Estaba llena de preguntas, sueños y curiosidad por lo que vendría.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="page">
-    <p>Llena de cuadernos nuevos,<br>
-    de lápices con ganas de decir cosas,<br>
-    de una cartuchera ordenada y curiosa.</p>
-
-    <p>Pero también estaba llena de cosas que no se veían.<br>
-    Dentro llevaba preguntas.</p>
+  <!-- TARJETA 2 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento2.png">
+      </div>
+      <div class="card-back">
+        <h2>Llegada al colegio</h2>
+        <p>
+          La niña caminaba sonriente hacia la escuela.  
+          El sol brillaba, las flores saludaban y las mariposas acompañaban su camino.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="page">
-    <p>¿Dónde me voy a sentar?<br>
-    ¿Habrá recreos largos?<br>
-    ¿Y qué pasará cuando algo no salga como espero?</p>
-
-    <p>La mochila no hablaba,<br>
-    pero sabía esperar.</p>
+  <!-- TARJETA 3 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento3.png">
+      </div>
+      <div class="card-back">
+        <h2>El aula de 1° grado</h2>
+        <p>
+          El pizarrón verde estaba lleno de letras y números.  
+          Una nueva idea comenzaba a encenderse dentro de ella.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="page">
-    <p>A la mañana siguiente, el colegio parecía el mismo.<br>
-    La puerta.<br>
-    El patio.<br>
-    El saludo de siempre.</p>
-
-    <p>Y sin embargo… algo era distinto.</p>
+  <!-- TARJETA 4 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento4.png">
+      </div>
+      <div class="card-back">
+        <h2>El mejor comienzo</h2>
+        <p>
+          La mochila brilló con fuerza.  
+          Curiosidad, confianza y ganas de aprender llenaron el corazón.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="page">
-    <p>Ya no estaba la sala de jardín.<br>
-    Había un pasillo nuevo.<br>
-    Un aula con mesas que invitaban a pensar.<br>
-    Un pizarrón grande, lleno de posibilidades.</p>
-  </div>
-
-  <div class="page">
-    <p>En primer grado, las cosas no se hacían de golpe.<br>
-    Se descubrían de a poco.</p>
-
-    <p>Aparecieron desafíos nuevos.<br>
-    Palabras que pedían ser leídas mejor.<br>
-    Ideas que crecían cuando se compartían.</p>
-  </div>
-
-  <div class="page">
-    <p>La mochila se fue acomodando.<br>
-    Cada día pesaba distinto…</p>
-
-    <p>no menos, no más.<br>
-    Distinto.</p>
-  </div>
-
-  <div class="page">
-    <p>Porque ahora estaba llena<br>
-    de preguntas mejores,<br>
-    de intentos,<br>
-    de risas en el recreo,<br>
-    de errores que enseñaban caminos.</p>
-  </div>
-
-  <div class="page">
-    <p>Un día, la mochila entendió algo importante:<br>
-    no traía solo útiles.</p>
-
-    <p>Traía ganas de aprender.<br>
-    Traía confianza.<br>
-    Traía curiosidad.</p>
-  </div>
-
-  <div class="page">
-    <h2>Y eso…</h2>
-    <h3>en primer grado,<br>era el mejor comienzo.</h3>
-
-    <img src="A_collection_of_five_3D-rendered_digital_illustrat.png" class="final-img">
+  <!-- TARJETA 5 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento5.png">
+      </div>
+      <div class="card-back">
+        <h2>El recreo</h2>
+        <p>
+          Entre risas, juegos y nuevos amigos,  
+          el primer día se volvió una hermosa aventura.
+        </p>
+      </div>
+    </div>
   </div>
 
 </div>
-
 
 <div class="controls">
-  <button onclick="prevPage()">⬅ Anterior</button>
-  <button onclick="nextPage()">Siguiente ➡</button>
-
-  <div id="counter" class="counter"></div>
+  <button id="prevBtn">⬅ Anterior</button>
+  <button id="nextBtn">Siguiente ➡</button>
 </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
 
 
 
 <script src="script.js"></script>
 </body>
 </html>
+
