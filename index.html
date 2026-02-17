@@ -5,105 +5,101 @@
   <title>La mochila que sabía esperar</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<div class="book" id="book">
+<h1 class="titulo">La mochila que sabía esperar</h1>
 
-  <!-- PÁGINA 1 -->
-  <div class="page">
-    <div class="front">
-      <div class="card-content">
+<div class="book">
+
+  <!-- TARJETA 1 -->
+  <div class="card active">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento1.png">
+        <p class="hint">Tocá “Siguiente” para leer ➡</p>
+      </div>
+      <div class="card-back">
         <h2>La noche anterior</h2>
-        <p>La mochila estaba lista desde la noche anterior. 
-        Llena de cuadernos nuevos, lápices curiosos y preguntas por descubrir.</p>
-
-        <img src="momento1.png" class="imagen-momento ocultar">
-      </div>
-
-      <div class="nav-buttons">
-        <button disabled>◀</button>
-        <button onclick="siguientePagina()">▶</button>
+        <p>
+          La mochila naranja esperaba en silencio bajo la luz de la lámpara.  
+          Estaba llena de preguntas, sueños y curiosidad por lo que vendría.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- PÁGINA 2 -->
-  <div class="page">
-    <div class="front">
-      <div class="card-content">
+  <!-- TARJETA 2 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento2.png">
+      </div>
+      <div class="card-back">
         <h2>Llegada al colegio</h2>
-        <p>El colegio parecía el mismo… pero algo era distinto.
-        Un nuevo pasillo, nuevas mesas y un mundo por descubrir.</p>
-
-        <img src="momento2.png" class="imagen-momento ocultar">
-      </div>
-
-      <div class="nav-buttons">
-        <button onclick="paginaAnterior()">◀</button>
-        <button onclick="siguientePagina()">▶</button>
+        <p>
+          La niña caminaba sonriente hacia la escuela.  
+          El sol brillaba, las flores saludaban y las mariposas acompañaban su camino.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- PÁGINA 3 -->
-  <div class="page">
-    <div class="front">
-      <div class="card-content">
-        <h2>El aula de 1°</h2>
-        <p>Las palabras, los números y las ideas comenzaron a crecer.
-        Leer, escribir y pensar se volvieron aventuras.</p>
-
-        <img src="momento3.png" class="imagen-momento ocultar">
+  <!-- TARJETA 3 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento3.png">
       </div>
-
-      <div class="nav-buttons">
-        <button onclick="paginaAnterior()">◀</button>
-        <button onclick="siguientePagina()">▶</button>
+      <div class="card-back">
+        <h2>El aula de 1° grado</h2>
+        <p>
+          El pizarrón verde estaba lleno de letras y números.  
+          Una nueva idea comenzaba a encenderse dentro de ella.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- PÁGINA 4 -->
-  <div class="page">
-    <div class="front">
-      <div class="card-content">
+  <!-- TARJETA 4 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento4.png">
+      </div>
+      <div class="card-back">
         <h2>El mejor comienzo</h2>
-        <p>La mochila descubrió que traía algo más importante:
-        curiosidad, confianza y ganas de aprender.</p>
-
-        <img src="momento4.png" class="imagen-momento ocultar">
-      </div>
-
-      <div class="nav-buttons">
-        <button onclick="paginaAnterior()">◀</button>
-        <button onclick="siguientePagina()">▶</button>
+        <p>
+          La mochila brilló con fuerza.  
+          Curiosidad, confianza y ganas de aprender llenaron el corazón.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- PÁGINA 5 -->
-  <div class="page">
-    <div class="front">
-      <div class="card-content">
-        <h2>Recreo y alegría</h2>
-        <p>Entre risas, juegos y amigos, cada día se volvió una nueva historia.</p>
-
-        <img src="momento5.png" class="imagen-momento ocultar">
+  <!-- TARJETA 5 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="momento5.png">
       </div>
-
-      <div class="nav-buttons">
-        <button onclick="paginaAnterior()">◀</button>
-        <button disabled>▶</button>
+      <div class="card-back">
+        <h2>El recreo</h2>
+        <p>
+          Entre risas, juegos y nuevos amigos,  
+          el primer día se volvió una hermosa aventura.
+        </p>
       </div>
     </div>
   </div>
 
 </div>
 
-<script src="script.js"></script>
+<div class="controls">
+  <button id="prevBtn">⬅ Anterior</button>
+  <button id="nextBtn">Siguiente ➡</button>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
-
 
