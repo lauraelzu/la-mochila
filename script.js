@@ -1,33 +1,30 @@
-let currentPage = 0;
-const pages = document.querySelectorAll(".page");
-const total = pages.length;
+const cards = document.querySelectorAll(".card");
+let current = 0;
 
-function showPage(index, direction) {
-  pages.forEach(p => {
-    p.classList.remove("active", "exit-left", "exit-right");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+function showCard(index){
+  cards.forEach(card => {
+    card.classList.remove("active","flipped");
   });
-
-  pages[index].classList.add("active");
-
-  // actualizar contador
-  document.getElementById("counter").textContent =
-    "Página " + (index + 1) + " de " + total;
+  cards[index].classList.add("active");
 }
 
-function nextPage() {
-  if (currentPage < pages.length - 1) {
-    pages[currentPage].classList.add("exit-left");
-    currentPage++;
-    showPage(currentPage, "next");
+nextBtn.addEventListener("click", () => {
+  if(!cards[current].classList.contains("flipped")){
+    cards[current].classList.add("flipped");
+  } else {
+    current = (current + 1) % cards.length;
+    showCard(current);
   }
-}
+});
 
-function prevPage() {
-  if (currentPage > 0) {
-    pages[currentPage].classList.add("exit-right");
-    currentPage--;
-    showPage(currentPage, "prev");
+prevBtn.addEventListener("click", () => {
+  if(cards[current].classList.contains("flipped")){
+    cards[current].classList.remove("flipped");
+  } else {
+    current = (current - 1 + cards.length) % cards.length;
+    showCard(current);
   }
-}
-
-showPage(currentPage);
+});
