@@ -1,46 +1,31 @@
-const paginas = document.querySelectorAll(".page");
-let paginaActual = 0;
+const cards = document.querySelectorAll(".card");
+let current = 0;
 
-/* Mostrar imagen con delay */
-function mostrarImagenDePagina(index) {
-  paginas.forEach((pagina, i) => {
-    const img = pagina.querySelector(".imagen-momento");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
 
-    if (!img) return;
-
-    if (i === index) {
-      img.classList.add("ocultar");
-
-      setTimeout(() => {
-        img.classList.remove("ocultar");
-      }, 600);
-    } else {
-      img.classList.add("ocultar");
-    }
+function showCard(index){
+  cards.forEach(card => {
+    card.classList.remove("active","flipped");
   });
+  cards[index].classList.add("active");
 }
 
-/* Botón siguiente */
-function siguientePagina() {
-  if (paginaActual < paginas.length - 1) {
-    paginas[paginaActual].classList.add("turn");
-    paginaActual++;
-    mostrarImagenDePagina(paginaActual);
+nextBtn.addEventListener("click", () => {
+  if(!cards[current].classList.contains("flipped")){
+    cards[current].classList.add("flipped");
+  } else {
+    current = (current + 1) % cards.length;
+    showCard(current);
   }
-}
+});
 
-/* Botón anterior */
-function paginaAnterior() {
-  if (paginaActual > 0) {
-    paginaActual--;
-    paginas[paginaActual].classList.remove("turn");
-    mostrarImagenDePagina(paginaActual);
+prevBtn.addEventListener("click", () => {
+  if(cards[current].classList.contains("flipped")){
+    cards[current].classList.remove("flipped");
+  } else {
+    current = (current - 1 + cards.length) % cards.length;
+    showCard(current);
   }
-}
-
-/* Inicial */
-window.onload = () => {
-  mostrarImagenDePagina(0);
-};
-
+});
 
